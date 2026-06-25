@@ -174,5 +174,87 @@
         if (!encontrado) {
             System.out.println("No existen clientes en esa ciudad.");
         }
+
+
+
+
+public class Cliente{
+private int id;
+private String nombre;
+private String apellidos;
+private String sexo;
+private String ciudad;
+private String fechaNacimiento;
+private String telefono;
+private String correo;
+
+private Cliente(int id, String nombre, String apellidos, String sexo,
+                String ciudad, String fechaNacimiento,
+                String telefono, String correo) {
+    this.id = id;
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+    this.sexo = sexo;
+    this.ciudad = ciudad;
+    this.fechaNacimiento = fechaNacimiento;
+    this.telefono = telefono;
+    this.correo = correo;
+}
+
+    public static Cliente createCliente(int id, String nombre, String apellidos, String sexo,
+                                        String ciudad, String fechaNacimiento,
+                                        String telefono, String correo) {
+        return new Cliente(id, nombre, apellidos, sexo, ciudad, fechaNacimiento, telefono, correo);
+    }
+
+    public int getId() {
+    return id;
+}
+
+public String getCiudad() {
+    return ciudad;
+}
+
+public void setNombre(String nombre) {
+    this.nombre = nombre;
+}
+
+public void setApellidos(String apellidos) {
+    this.apellidos = apellidos;
+}
+
+public void setSexo(String sexo) {
+    this.sexo = sexo;
+}
+
+public void setCiudad(String ciudad) {
+    this.ciudad = ciudad;
+}
+
+public void setFechaNacimiento(String fechaNacimiento) {
+    this.fechaNacimiento = fechaNacimiento;
+}
+
+public void setTelefono(String telefono) {
+    this.telefono = telefono;
+}
+
+public void setCorreo(String correo) {
+    this.correo = correo;
+}
+
+@Override
+public String toString() {
+    return "ID: " + id +
+            ", Nombre: " + nombre +
+            ", Apellidos: " + apellidos +
+            ", Sexo: " + sexo +
+            ", Ciudad: " + ciudad +
+            ", Fecha Nacimiento: " + fechaNacimiento +
+            ", Teléfono: " + telefono +
+            ", Correo: " + correo;
+}
+}
+        
     }
 }
